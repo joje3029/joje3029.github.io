@@ -56,23 +56,24 @@ plugins:
   - jekyll-include-cache # 캐시를 사용하여 빠른 렌더링.
   - jekyll-seo-tag # SEO(검색 노출)에 도움 줌. 기본 SEO 메타 태그를 자동 생성.
 
-author:
-  name   : "Joje"
-  avatar : "/assets/images/joje.png"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
-  links:
-    # - label: "Website"
-    #   icon: "fas fa-fw fa-link"
-    #   url: "https://"
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   url: "https://instagram.com/"
+# 좌측에 나오는 작성자 정보 필요 없어서 주석처리
+# author:
+#   name   : "Joje"
+#   avatar : "/assets/images/joje.png"
+#   bio    : "My awesome biography constrained to a sentence or two goes here."
+#   links:
+#     # - label: "Website"
+#     #   icon: "fas fa-fw fa-link"
+#     #   url: "https://"
+#     # - label: "Twitter"
+#     #   icon: "fab fa-fw fa-twitter-square"
+#     #   url: "https://twitter.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/"
+#     # - label: "Instagram"
+#     #   icon: "fab fa-fw fa-instagram"
+#     #   url: "https://instagram.com/"
 
 # footer:
 #   links:
