@@ -6,8 +6,8 @@
 {%- assign post = include.post -%}
 
 <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-  <a class="archive__item-link" href="{{ post.url | relative_url }}" rel="bookmark" aria-label="{{ post.title | escape }}"></a>
-  <div class="archive__item-body">
+  <div class="archive__item-body border-black">
+    <a href="{{ post.url | relative_url }}" rel="bookmark" class="border-blue">
     {%- if post.date -%}
     <time class="archive__item-date" datetime="{{ post.date | date_to_xmlschema }}">
       {{ post.date | date: "%Y-%m-%d" }}
@@ -15,7 +15,10 @@
     {%- endif -%}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {{ post.title }}
+      <!-- <a href="{{ post.url | relative_url }}" rel="bookmark">
+        {{ post.title }}
+      </a> -->
+      {{ post.title }}  
     </h2>
 
     {%- if post.excerpt -%}
@@ -23,6 +26,7 @@
       {{ post.excerpt | markdownify | strip_html | truncate: 200 }}
     </p>
     {%- endif -%}
+  </a>
   </div>
 </article>
 
