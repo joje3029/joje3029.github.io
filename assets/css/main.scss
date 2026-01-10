@@ -149,12 +149,24 @@
 }
 
 .layout--home .archive__item {
+  position: relative;
   border-radius: 12px;
   border: 1px solid #e5e5e5;
   padding: 1rem 1.25rem;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02);
   background-color: #fff;
   margin-bottom: 1.5rem;
+}
+
+.layout--home .archive__item-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.layout--home .archive__item-body {
+  position: relative;
+  z-index: 2;
 }
 
 .layout--home .archive__item-title {
