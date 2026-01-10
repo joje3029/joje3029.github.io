@@ -139,6 +139,10 @@
 
 /* ===== Posts list: card style ===== */
 
+.layout--home .archive__subtitle {
+  display: none;
+}
+
 .layout--home .archive {
   max-width: 1100px;
   margin-inline: auto;
