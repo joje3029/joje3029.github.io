@@ -48,30 +48,31 @@ include:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
+  - jekyll-paginate # 페이지네이션
+  - jekyll-sitemap # 사이트맵을 자동 생성. SEO(검색 노출)에 도움 줌
+  - jekyll-gist #github gist를 포스트 안에 쉽게 삽입. % gist gist_id %} 같은 태그로 코드 스니펫을 넣을 때 사용
+  # - jekyll-feed # RSS 피드를 자동 생성.
+  # - jemoji # 이모지를 쉽게 삽입.
+  - jekyll-include-cache # 캐시를 사용하여 빠른 렌더링.
+  - jekyll-seo-tag # SEO(검색 노출)에 도움 줌. 기본 SEO 메타 태그를 자동 생성.
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
+  name   : "Joje"
+  avatar : "/assets/images/joje.png"
   bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
 # footer:
 #   links:
@@ -93,10 +94,12 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
+      # read_time: true # 읽는 시간 표시, 필요 없음
+      # comments: true # 댓글 기능, 필요 없음
       share: true
-      related: true
+      # related: true # 관련 글 표시, 필요 없음
+      toc: true # 목차 표시
+      toc_sticky: true # 목차 표시 위치 고정
   # _pages
   - scope:
       path: "_pages"
