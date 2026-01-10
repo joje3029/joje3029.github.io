@@ -150,6 +150,7 @@
   padding: 1rem 1.25rem;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.02);
   background-color: #fff;
+  margin-bottom: 1.5rem;
 }
 
 .layout--home .archive__item-title {
@@ -159,6 +160,13 @@
 .layout--home .archive__item-excerpt {
   margin-bottom: 0;
   color: #555;
+}
+
+.layout--home .archive__item-date {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: #999;
 }
 
 /* ===== Post page: TOC tweaks (uses Minimal Mistakes built-in toc) ===== */

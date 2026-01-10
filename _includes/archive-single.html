@@ -1,0 +1,30 @@
+{%- comment -%}
+  Override of Minimal Mistakes `archive-single` include
+  Used by home, category, tag, and other archive-style layouts.
+{%- endcomment -%}
+
+{%- assign post = include.post -%}
+
+<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  <div class="archive__item-body">
+    {%- if post.date -%}
+    <time class="archive__item-date" datetime="{{ post.date | date_to_xmlschema }}">
+      {{ post.date | date: "%Y년 %-m월 %-d일" }}
+    </time>
+    {%- endif -%}
+
+    <h2 class="archive__item-title" itemprop="headline">
+      <a href="{{ post.url | relative_url }}" rel="bookmark">
+        {{ post.title }}
+      </a>
+    </h2>
+
+    {%- if post.excerpt -%}
+    <p class="archive__item-excerpt" itemprop="description">
+      {{ post.excerpt | markdownify | strip_html | truncate: 200 }}
+    </p>
+    {%- endif -%}
+  </div>
+</article>
+
+
