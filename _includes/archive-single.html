@@ -9,7 +9,8 @@
   <div class="archive__item-body">
     {%- if post.date -%}
     <time class="archive__item-date" datetime="{{ post.date | date_to_xmlschema }}">
-      {{ post.date | date: "%Y년 %-m월 %-d일" }}
+      <!-- {{ post.date | date: "%Y년 %-m월 %-d일" }} -->
+      {{ post.date | date: "%Y-%m-%d" }}
     </time>
     {%- endif -%}
 
