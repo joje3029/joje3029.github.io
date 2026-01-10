@@ -1,0 +1,65 @@
+<header class="masthead custom-masthead" role="banner">
+  <div class="masthead__inner">
+    <div class="masthead__top">
+      <a class="masthead__brand" href="{{ '/' | relative_url }}">
+        {% if site.author.avatar %}
+        <img
+          class="masthead__avatar"
+          src="{{ site.author.avatar | relative_url }}"
+          alt="{{ site.author.name | default: site.title }}"
+        >
+        {% endif %}
+        <div class="masthead__brand-text">
+          <span class="masthead__title">{{ site.title }}</span>
+          {% if site.description %}
+          <span class="masthead__subtitle">{{ site.description }}</span>
+          {% endif %}
+        </div>
+      </a>
+
+      {% if site.search %}
+      <form class="masthead__search" action="{{ '/search/' | relative_url }}" method="get" role="search">
+        <label class="screen-reader-text" for="site-search">검색</label>
+        <input
+          id="site-search"
+          type="search"
+          name="q"
+          class="masthead__search-input"
+          placeholder="검색어를 입력하세요"
+          aria-label="사이트 내 검색"
+        >
+      </form>
+      {% endif %}
+    </div>
+
+    <nav class="masthead__nav" aria-label="사이트 내비게이션 및 카테고리">
+      <ul class="masthead__nav-list">
+        <li class="masthead__nav-item">
+          <a href="{{ '/' | relative_url }}" class="masthead__nav-link{% if page.url == '/' %} is-active{% endif %}">
+            Home
+          </a>
+        </li>
+        <li class="masthead__nav-item">
+          <a href="{{ '/posts/' | relative_url }}" class="masthead__nav-link{% if page.url == '/posts/' %} is-active{% endif %}">
+            Posts
+          </a>
+        </li>
+
+        {%- assign sorted_categories = site.categories | sort -%}
+        {%- for cat in sorted_categories -%}
+          {%- assign cat_name = cat[0] -%}
+          <li class="masthead__nav-item masthead__nav-item--category">
+            <a
+              href="{{ '/categories/#' | append: cat_name | slugify | relative_url }}"
+              class="masthead__nav-link{% if page.category == cat_name or page.categories contains cat_name %} is-active{% endif %}"
+            >
+              {{ cat_name }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+

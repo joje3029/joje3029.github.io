@@ -1,7 +1,32 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
+layout: single
+author_profile: false
+title: ""
+classes: home-intro
 ---
+
+<section class="home-profile-card">
+  <div class="home-profile-card__inner">
+    <img
+      class="home-profile-card__avatar"
+      src="{{ site.author.avatar | relative_url }}"
+      alt="{{ site.author.name | default: site.title }}"
+    >
+    <div class="home-profile-card__body">
+      <h1 class="home-profile-card__heading">
+        {{ site.author.name | default: site.title }}
+      </h1>
+      <p class="home-profile-card__subheading">
+        {{ site.description }}
+      </p>
+      <div class="home-profile-card__links">
+        {% for link in site.author.links %}
+        <a class="btn btn--small" href="{{ link.url }}" target="_blank" rel="noopener">
+          <i class="{{ link.icon }}" aria-hidden="true"></i>
+          <span>{{ link.label }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
