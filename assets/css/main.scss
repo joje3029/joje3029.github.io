@@ -5,6 +5,19 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+a {
+  color: #3d4144;
+  text-decoration: none;
+  border: 0; /* Minimal Mistakes가 쓰는 밑줄용 border-bottom 제거 */
+}
+
+a:hover,
+a:focus {
+  color: #3d4144;      /* hover 시 색 유지 (원하면 다른 색으로 변경 가능) */
+  text-decoration: none;
+  border: 0;
+}
+
 /* ===== Custom header: profile + search + category nav ===== */
 
 .custom-masthead {
@@ -146,7 +159,7 @@
 /* Posts 카드 전체 링크 스타일 제거 */
 .layout--home .archive__item-body a {
   display: block;          /* 카드 전체 클릭 영역 보장 */
-  color: inherit;          /* 부모 텍스트 색상 그대로 사용 */
+  color: #3D4144;          /* 부모 텍스트 색상 그대로 사용 */
   text-decoration: none;   /* 밑줄 제거 */
   border: 0;               /* Minimal Mistakes 기본 link 밑줄(border-bottom) 제거 */
 }
